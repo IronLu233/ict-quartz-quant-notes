@@ -1,5 +1,5 @@
 ---
-title: ICT 量化学习笔记
+title: Iron's ICT note
 ---
 
 # ICT 量化学习笔记
