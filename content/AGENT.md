@@ -8,8 +8,8 @@
 
 `videos/` 目录下存放两套课程的视频及处理数据：
 
-- `videos/ICT Mentorship 2016/` ICT 2016
-- `videos/2017 ICT Private Mentorship Core Content/` ICT 2017
+- `videos/ICT Mentorship 2016/` — 38节课（Month 1-4），基础到高级 PD Arrays
+- `videos/2017 ICT Private Mentorship Core Content/` — 77节课（Month 5-12），HTF 分析到 Top-Down Analysis
 
 每个课程文件夹包含：
 
@@ -66,6 +66,7 @@ videos/          → 视频资源（不在笔记体系内）
 - ICT 专有术语使用中英结合格式
 - 主动读取可能的字幕
 - 积极使用Mermaid画图，并且Mermaid图只能从上往下画
+- 量化部分永远放在笔记最后
 
 ## 工具能力
 
@@ -76,19 +77,14 @@ videos/          → 视频资源（不在笔记体系内）
 用法示例：
 
 ```bash
-ffmpeg -ss 00:12:34 -i "videos/ICT Mentorship 2016/Month1 01 .../xxx.mp4" -frames:v 1 -q:v 2 "attachments/M1-01_截图说明.jpg"
+ffmpeg -ss 00:12:34 -i "videos/ICT Mentorship 2016/Month1 01 .../xxx_synthesized.mp4" -frames:v 1 -q:v 2 "attachments/M1-01_截图说明.jpg"
 ```
 
 - 截图存放到 `attachments/` 文件夹
 - 文件名建议：`{课程编号}_{内容描述}.jpg`
 - 在笔记中用 `![[M1-01_截图说明.jpg]]` 嵌入
-
-**截图应主动、积极地执行，不需要等用户逐一要求：**
-
-- 写笔记时，每个章节/知识点都应主动从视频中截取至少一张关键帧
-- 当字幕或笔记内容涉及图表、K线图、示意图、价格走势等视觉内容时，必须主动截图
-- AI 应根据字幕中的时间戳和上下文，自行判断最佳截图时机，主动执行 ffmpeg 命令
-- 截图是笔记的标准组成部分，而不是可选的附加操作
+- 用户指定时间戳或描述需要截取的画面内容，由 AI 执行 ffmpeg 命令
+- 只要截图能帮助澄清结构、走势或讲解重点，就应尽可能积极使用截图能力，不必等用户每次单独提出
 
 ## AI 行为准则
 
