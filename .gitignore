@@ -10,3 +10,10 @@ private/
 .replit
 replit.nix
 content/nul
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
